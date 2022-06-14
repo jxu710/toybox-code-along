@@ -1,4 +1,8 @@
 // categories
+.categories{
+    margin-top: 10px;
+}
+
 .categoryList{
     display: flex;
     flex-wrap: wrap;
@@ -32,6 +36,27 @@
         }
         &:hover{
             transform: scale(0.90);
+        }
+    }
+}
+
+// let them play
+.play {
+    background-image: url(../assets/background-image.jpg);
+    background-image: center;
+    background-size: cover;
+    min-height: 90vh;
+    .wrapper{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-width: 90vh;
+        .playContent{
+            width:60%;
+            border: 20px solid $pasteBlue;
+            background-color: $solidWhite;
+            padding: 60px;
+            text-align: center;
         }
     }
 }
