@@ -154,6 +154,11 @@
 					<p>Bauris eget lacus, amet mollis felis, sed posuere odio. Justo purus orci ultricies et. Sit etiam porta sed tellus.
 					Cattis pellentesque felis tristique eget purus feugiat massa.</p>
 					<a href="#" class="aboutButton button">Learn About Us</a>
+					<dialog class="modal" id="modal">
+						<h2>about out prodoct</h2>
+						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident consequuntur saepe eveniet facilis magnam repellendus cupiditate dolore iusto ratione eum. Quis modi ipsum autem inventore eligendi, voluptates reiciendis nam. Quis!</p>
+						<a href="#" class="closeButton button">x</a>
+					</dialog>
 				</div>
 			</div>
 		</section>
@@ -265,11 +270,25 @@
 	<script>
 		const closeMenu = document.querySelector('.menuClose');
 		const slideOutNav = document.querySelector('.slideOutNav');
-
+		
 		closeMenu.addEventListener('click', function () {
+			event.preventDefault();
 			slideOutNav.style.display = 'none';
-			
 			});
+		
+		const modal = document.querySelector('.modal');
+		const aboutButton = document.querySelector('.aboutButton');
+		const closeButton = document.querySelector('.closeButton');
+
+		aboutButton.addEventListener('click', function(event){
+			event.preventDefault();
+			modal.show();
+		})
+
+		closeButton.addEventListener('click', function () {
+			event.preventDefault();
+			modal.close();
+			})
 
 	</script>
 
